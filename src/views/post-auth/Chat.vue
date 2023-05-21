@@ -76,9 +76,9 @@ async function handleSubmit(event) {
   await axios.post(`${API_URL}/chats/${currentId}/message`, {
     by: user.email,
     datetime: new Date(),
-    content: this.msg
+    content: msg
   })
-  this.msg = '';
+  msg = '';
 }
 
 
