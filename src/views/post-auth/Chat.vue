@@ -98,7 +98,6 @@ async function handleSubmit(event) {
         <button type="submit">send</button>
       </form>
     </footer>
-    <audio id="beep_sound"><source src="./whatsapp_whistle.mp3" type="audio/mpeg"/></audio>
   </div>
 </template>
 
