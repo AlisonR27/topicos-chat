@@ -7,11 +7,11 @@ export const state = reactive({
   barEvents: []
 });
 
+
 // "undefined" means the URL will be computed from the `window.location` object
-const URL = process.env.NODE_ENV === "production" ? undefined : "http://localhost:5555/msg";
+const URL = import.meta.env.NODE_ENV === "production" ? undefined : import.meta.env.VITE_API_SOCKET_HOST;
 
 export const socket = io(URL, {
-  
   cors: {
     origin: "http://localhost:5173",
     methods: ["GET", "POST"]
